@@ -14,5 +14,6 @@
     echo 'Tu email es: ', $email;
 ?>        
 
+
 </body>
 </html>
