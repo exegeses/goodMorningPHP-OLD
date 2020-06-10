@@ -16,14 +16,14 @@
             'Thrusday'=>'Jueves',
             'Friday'=>'Viernes',
             'Saturday'=>'Sabado',
-         ];
+           ];
 
     $meses = [
                 1 => 'enero','febrero','marzo',
                 'abril','mayo','junio',
                 'julio','agosto','septiembre',
                 'octubre','noviembre','diciembre'
-            ];
+             ];
 
     $diaMes = date('d');
     $dia = date('l');
