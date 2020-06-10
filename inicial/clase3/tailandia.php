@@ -1,6 +1,6 @@
 <?php
 
-	$locacion = ["chinatown",
+	$locacion = [   "chinatown",
 					"floating-market", 
 					"hat-laem",
 					"wat-arun",
@@ -17,6 +17,8 @@
 					"tuk-tuk",
 					"wat-saket"
 					 ];
+	$cantidad = count($locacion);
+	$i = 0;
 ?>
 
 <!DOCTYPE html>
@@ -46,11 +48,18 @@
 	<h1>Tailandia</h1>
     <section id="contenedor">
 
-        <article>
-            <img src="tailandia/muestra.png">
-            <br>
-            <h2>Locación</h2>
-        </article>
+<?php
+        while( $i < $cantidad ) {
+?>
+            <article>
+                <img src="tailandia/<?= $locacion[$i]; ?>.jpg">
+                <br>
+                <h2><?= $locacion[$i] ?></h2>
+            </article>
+<?php
+            $i++;
+        }
+?>
 
     </section>
 
