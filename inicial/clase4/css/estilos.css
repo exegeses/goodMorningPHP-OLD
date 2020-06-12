@@ -1,4 +1,8 @@
 
 body{
-       font-family: Roboto;
+       color: #333;
+}
+ul img{
+    width: 36px;
+    margin-right: 20px;
 }

@@ -32,7 +32,7 @@
         foreach ( $lineas as $clave => $recorrido ){
 ?>
             <li class="list-group-item list-group-item-action">
-                <img src="subtes/linea-<?= $clave ?>.png" class="img-thumbnail">
+                <img src="subtes/linea-<?= $clave ?>.png" class="img-fluid">
                 <?= $recorrido ?>
             </li>
 <?php
