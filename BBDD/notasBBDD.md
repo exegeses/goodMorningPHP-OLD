@@ -17,3 +17,6 @@
 [2] Creación de mensaje SQL  
 [3] Ejecición de mensaje SQL  
 [4] Informes (muestreo de información en pantalle)  
+
+
+tarea: hacer listado de marcas y listado de productos
