@@ -17,13 +17,12 @@
             if( $divisor != 0 ){
                 $resultado = $dividendo / $divisor;
                 return $resultado;
-            }else{
-                return 'el divisor no puede ser 0';
             }
+            return 'el divisor no puede ser 0';
+
         }
-        else{
-            return 'ambos deben ser números';
-        }
+
+        return 'ambos deben ser números';
 
     }
 
