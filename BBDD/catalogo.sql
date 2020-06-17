@@ -127,7 +127,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`idUsuario`, `usuNombre`, `usuApellido`, `usuEmail`, `usuPass`, `usuEstado`) VALUES
 (1, 'admin', 'admin', 'admin@admin.com', 'admin', 1),
 (2, 'nombretest', 'apellidotest', 'test@mail.com', 'clavetest', 1),
-(3, 'Cosme', 'Fulanito', 'cfulanito@mail.com', 'cfulanito', 1),
+(3, 'Cosme', 'Fulanito', 'cfulanito@mail.com', 'cfulanito', 1);
 
 
 --
