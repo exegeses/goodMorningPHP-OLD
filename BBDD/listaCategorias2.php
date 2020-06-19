@@ -2,6 +2,8 @@
 
     require 'funciones/conexion.php';
 
+    $link = conectar();
+
     $sql = "SELECT idCategoria, catNombre
                 FROM categorias";
 
