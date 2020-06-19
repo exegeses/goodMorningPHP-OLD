@@ -10,6 +10,10 @@
     <main class="container">
         <h1>Panel de administración de marcas</h1>
 
+        <a href="admin.php" class="btn btn-outline-secondary my-2">
+            Volver a Dashboard
+        </a>
+
         <table class="table table-bordered table-striped table-hover">
             <thead class="thead-dark">
                 <tr>
@@ -45,6 +49,10 @@
     ?>
             </tbody>
         </table>
+
+        <a href="admin.php" class="btn btn-outline-secondary my-2">
+            Volver a Dashboard
+        </a>
 
     </main>
 
