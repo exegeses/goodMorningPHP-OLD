@@ -10,6 +10,16 @@
         return $resultado;
     }
 
+    function agregarCategoria()
+    {
+        $catNombre = $_POST['catNombre'];
+        $link = conectar();
+        $sql = "INSERT INTO categorias
+                        ( catNombre )
+                    VALUE
+                        ( '".$catNombre."' )";
+    }
+
 ###################
 ### CRUD de categorias
 /*
