@@ -1,13 +1,27 @@
 <?php  
-	
-	include 'includes/header.html';  
+
+    require 'funciones/conexion.php';
+    require 'funciones/categorias.php';
+        $chequeo = agregarCategoria();
+	include 'includes/header.html';
 	include 'includes/nav.php';  
 ?>
 
     <main class="container">
         <h1>Alta de una nueva categoría</h1>
 
-        mensaje
+    <?php
+        $clase = 'danger';
+        $mensaje = 'No se pudo agregar la categoría.';
+        if( $chequeo ){
+            $clase = 'success';
+            $mensaje = 'Categoría agregada corectamente.';
+        }
+    ?>
+        <div class="alert alert-<?= $clase ?>">
+            <?= $mensaje ?>
+        </div>
+
 
     </main>
 
