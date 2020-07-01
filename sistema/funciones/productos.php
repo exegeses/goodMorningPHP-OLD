@@ -17,9 +17,13 @@
 
     function subirImagen()
     {
-        /*** predeterminado si no enviaron archivo ***/
+        /*** predeterminado si no enviaron archivo en AGREGAR ***/
         $prdImagen = 'noDisponible.jpg';
 
+        /*** predeterminado si no enviaron archivo en MODIFICAR ***/
+        if( isset( $_POST['imagenActual'] ) ) {
+            $prdImagen = $_POST['imagenActual'];
+        }
         /*** si enviaron archivo y está ok  ***/
         if( $_FILES['prdImagen']['error'] == 0 ){
             ### subida del archivo
@@ -84,6 +88,33 @@
                                 or die(mysqli_error($link));
         $producto = mysqli_fetch_assoc($resultado);
         return $producto;
+    }
+
+    function modificarProducto()
+    {
+        $prdNombre = $_POST['prdNombre'];
+        $prdPrecio = $_POST['prdPrecio'];
+        $idMarca = $_POST['idMarca'];
+        $idCategoria = $_POST['idCategoria'];
+        $prdPresentacion = $_POST['prdPresentacion'];
+        $prdStock = $_POST['prdStock'];
+        $prdImagen = subirImagen();
+        $idProducto = $_POST['idProducto'];
+
+        $link = conectar();
+        $sql = "UPDATE productos 
+                    SET 
+                        prdNombre = '".$prdNombre."',
+                        prdPrecio = ".$prdPrecio.",
+                        idMarca = ".$idMarca.",
+                        idCategoria = ".$idCategoria.",
+                        prdPresentacion = '".$prdPresentacion."',
+                        prdStock = ".$prdStock.",
+                        prdImagen = '".$prdImagen."'
+                    WHERE idProducto = ".$idProducto;
+        $resultado = mysqli_query($link, $sql)
+                        or die( mysqli_error($link) );
+        return $resultado;
     }
 
 ###################

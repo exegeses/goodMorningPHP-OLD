@@ -87,6 +87,7 @@
                     <input type="file" name="prdImagen" class="form-control-file" id="prdImagen">
                 </div>
 
+                <input type="hidden" value="<?= $producto['prdImagen'] ?>" name="imagenActual">
                 <input type="hidden" value="<?= $producto['idProducto'] ?>" name="idProducto">
                 <button class="btn btn-dark mr-3 px-4">Modificar producto</button>
                 <a href="adminProductos.php" class="btn btn-outline-secondary">
