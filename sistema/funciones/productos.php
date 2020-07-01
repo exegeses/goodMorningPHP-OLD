@@ -6,7 +6,7 @@
         $sql = "SELECT idProducto, prdNombre, prdPrecio,
                         p.idMarca, mkNombre, 
                         p.idCategoria, catNombre,
-                        prdPresentacion, prdImagen
+                        prdPresentacion, prdStock, prdImagen
                     FROM productos p, marcas m, categorias c
                     WHERE p.idMarca = m.idMarca
                     AND  p.idCategoria = c.idCategoria";
@@ -75,7 +75,7 @@
         $sql = "SELECT idProducto, prdNombre, prdPrecio,
                         p.idMarca, mkNombre, 
                         p.idCategoria, catNombre,
-                        prdPresentacion, prdImagen
+                        prdPresentacion, prdStock, prdImagen
                     FROM productos p, marcas m, categorias c
                     WHERE p.idMarca = m.idMarca
                     AND  p.idCategoria = c.idCategoria
