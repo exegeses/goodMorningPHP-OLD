@@ -3,8 +3,10 @@
     require 'funciones/conexion.php';
     require 'funciones/marcas.php';
     require 'funciones/categorias.php';
+    require 'funciones/productos.php';
         $marcas = listarMarcas();
         $categorias = listarCategorias();
+        $producto = verProductoPorID();
 	include 'includes/header.html';
 	include 'includes/nav.php';  
 ?>
@@ -18,7 +20,10 @@
 
                 <div class="form-group">
                     <label for="prdNombre">Nombre del Producto</label>
-                    <input type="text" name="prdNombre" class="form-control" id="prdNombre" required>
+                    <input type="text"
+                           value="<?= $producto['prdNombre'] ?>"
+                           name="prdNombre"
+                           class="form-control" id="prdNombre" required>
                 </div>
 
                 <label for="prdPrecio">Precio del Producto</label>
@@ -26,7 +31,10 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text">$</div>
                     </div>
-                    <input type="number" name="prdPrecio" class="form-control" id="prdPrecio" min="0" step="0.01" required>
+                    <input type="number"
+                           value="<?= $producto['prdPrecio'] ?>"
+                           name="prdPrecio" 
+                           class="form-control" id="prdPrecio" min="0" step="0.01" required>
                 </div>
 
                 <div class="form-group">
