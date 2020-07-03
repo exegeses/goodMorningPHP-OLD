@@ -47,11 +47,21 @@
         </div>
 
         <script>
-            Swal.fire(
-                'Advertencia',
-                'Si pulsa el botón...',
-                'warning'
-            );
+            Swal.fire({
+                title: '¿Desea eliminar el producto?',
+                text: "Esta acción no se puede deshacer",
+                type: 'warning',
+                showCancelButton: true,
+                cancelButtonText: 'No lo quiero eliminar',
+                cancelButtonColor: '#7e7b7b',
+                confirmButtonColor: '#d00',
+                confirmButtonText: 'Si lo quiero eliminar'
+            }).then((result) => {
+                if ( !result.value ) {
+                    //redirección a panel
+                    window.location = 'adminProductos.php';
+                }
+            })
         </script>
 
     </main>
