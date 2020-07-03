@@ -55,7 +55,7 @@
                 cancelButtonText: 'No lo quiero eliminar',
                 cancelButtonColor: '#7e7b7b',
                 confirmButtonColor: '#d00',
-                confirmButtonText: 'Si lo quiero eliminar'
+                confirmButtonText: 'Si, lo quiero eliminar'
             }).then((result) => {
                 if ( !result.value ) {
                     //redirección a panel
