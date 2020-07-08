@@ -12,13 +12,30 @@
 
         <div class="row">
 
-            <div class="card col-md-4 col-sm">
-                <img src="productos/noDisponible.jpg" class="card-img-top">
+<?php
+        while( $producto = mysqli_fetch_assoc($productos) ) {
+?>
+            <div class="card col-sm-12 col-md-6 col-lg-4 p-0">
+                <img src="productos/<?= $producto['prdImagen'] ?>" class="card-img-top">
                 <div class="card-body">
-                    datos del producto
+                    <span class="display-4">
+                        <?= $producto['prdNombre'] ?>
+                    </span>
+                    <br>
+                    <?= $producto['catNombre'] ?> -
+                    <?= $producto['mkNombre'] ?>
+                    <br>
+                    <div class="lead text-info">
+                        $<?= $producto['prdPrecio'] ?>
+                    </div>
+                    <button class="btn btn-info btn-block">
+                        ver Detalle
+                    </button>
                 </div>
             </div>
-
+<?php
+        }
+?>
 
         </div>
 
