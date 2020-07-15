@@ -15,16 +15,16 @@
                       AND usuPass = '".$usuPass."'";
         $resultado = mysqli_query($link, $sql)
                         or die(mysqli_error($link));
-        $conexion = mysqli_num_rows($resultado);
-        if( $conexion == 0 ){
+        $cantidad = mysqli_num_rows($resultado);
+        if( $cantidad == 0 ){
+            //redirección a formLogin con error
+            header('location: formLogin.php?error=1');
+        }
+        else{
             ##########################
             ##### autenticación  #####
             ##########################
 
-            //redirección a formLogin *
-            header('location: formLogin.php');
-        }
-        else{
             //redirección a admin
             header('location: admin.php');
         }

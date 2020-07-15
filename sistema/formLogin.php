@@ -27,6 +27,23 @@
 
             </form>
         </div>
+        <?php
+            if( isset($_GET['error']) ){
+                $error = $_GET['error'];
+
+        ?>
+                <script>
+                    Swal.fire(
+                        'Error de ingreso',
+                        'Nombre de usuario y/o clave incorrectos.',
+                        'error'
+                    )
+                </script>
+        <?php
+            }
+        ?>
+
+
     </main>
 
 <?php  include 'includes/footer.php';  ?>
