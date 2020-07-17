@@ -43,10 +43,12 @@
 
     function logout()
     {
+        $datosUsuario = $_SESSION['usuNombre'].' '.$_SESSION['usuApellido'];
         session_unset();
         session_destroy();
 
         //redirección con demora
         header('refresh:3;url=index.php');
+        return $datosUsuario;
     }
 

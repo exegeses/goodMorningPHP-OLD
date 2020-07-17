@@ -2,7 +2,7 @@
 
     require 'config/config.php';
     require 'funciones/autenticacion.php';
-        logout();
+        $datosUsuario = logout();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -11,7 +11,7 @@
         <h1>Salir de sistema</h1>
 
         <div class="alert alert-info col-6 mx-auto">
-            Gracias por su visita.
+            Gracias <?= $datosUsuario ?> por su visita.
         </div>
 
     </main>
