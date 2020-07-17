@@ -10,7 +10,10 @@
         <a class="py-2" href="adminProductos.php">Productos</a>
         <a class="py-2" href="adminUsuarios.php">Usuarios</a>
 
-<!-- si no
+<?php
+    // si está logueado
+    if( isset($_SESSION['login']) ){
+?>
         <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <a href="#"><i class="fas fa-sign-out-alt"></i>
                 Nombre Apellido
@@ -21,10 +24,17 @@
                 <a class="dropdown-item bg-dark" href="">Modificar Perfil</a>
                 <a class="dropdown-item bg-dark" href="">Cambiar contraseña</a>
             </div>
--->
+<?php
+    }
+    else{
+        // si no esta logueado
+?>
 
         <button class="btn btn-dark">
             <a href="formLogin.php"><i class="fas fa-sign-in-alt mr-2"></i> Ingresar</a>
         </button>
+<?php
+    }
+?>
     </div>
 </nav>
