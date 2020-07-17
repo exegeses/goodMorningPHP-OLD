@@ -16,7 +16,7 @@
 ?>
         <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <a href="#"><i class="fas fa-sign-out-alt"></i>
-                Nombre Apellido
+                <?= $_SESSION['usuNombre'] ?> <?= $_SESSION['usuApellido'] ?>
             </a>
         </button>
             <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">

@@ -25,6 +25,9 @@
             ##### autenticación  #####
             ##########################
             $_SESSION['login'] = 1;
+            $datosUsuario = mysqli_fetch_assoc($resultado);
+            $_SESSION['usuNombre'] = $datosUsuario['usuNombre'];
+            $_SESSION['usuApellido'] = $datosUsuario['usuApellido'];
             //redirección a admin
             header('location: admin.php');
         }
@@ -40,6 +43,10 @@
 
     function logout()
     {
+        session_unset();
+        session_destroy();
 
+        //redirección con demora
+        header('refresh:3;url=index.php');
     }
 
