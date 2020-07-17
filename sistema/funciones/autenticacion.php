@@ -24,7 +24,7 @@
             ##########################
             ##### autenticación  #####
             ##########################
-
+            $_SESSION['login'] = 1;
             //redirección a admin
             header('location: admin.php');
         }
@@ -33,7 +33,9 @@
 
     function autenticar()
     {
-
+        if( !isset( $_SESSION['login'] ) ){
+            header('location: formLogin.php?error=2');
+        }
     }
 
     function logout()

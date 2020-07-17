@@ -1,5 +1,6 @@
 <?php  
-	
+
+    require 'config/config.php';
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -30,12 +31,17 @@
         <?php
             if( isset($_GET['error']) ){
                 $error = $_GET['error'];
-
+                $titulo = 'Error de ingreso';
+                $mensaje = 'Nombre de usuario y/o clave incorrectos.';
+                if( $error == 2 ){
+                    $titulo = 'Acceso no permitido';
+                    $mensaje = 'Debe loguearse para ingresar.';
+                }
         ?>
                 <script>
                     Swal.fire(
-                        'Error de ingreso',
-                        'Nombre de usuario y/o clave incorrectos.',
+                        '<?= $titulo; ?>',
+                        '<?= $mensaje; ?>',
                         'error'
                     )
                 </script>
